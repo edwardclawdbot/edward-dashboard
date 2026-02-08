@@ -350,9 +350,45 @@
         </div>
 
         <div class="grid">
-            <div class="card" id="current-task">
+            <div class="card">
                 <h2>🔥 Currently Working On</h2>
                 <div id="working-content">Loading...</div>
+            </div>
+            
+            <div class="card">
+                <h2>💡 Protection SaaS Research</h2>
+                <div id="research-content">
+                    <div class="research-item"><strong>🎯 TOP IDEA:</strong> AI Content Detection SaaS</div>
+                    <div class="research-item"><strong>💰 Market:</strong> $4.8B DLP, growing</div>
+                    <div class="research-item"><strong>⚡ Opportunity:</strong> Certificate Lifecycle Management</div>
+                    <div class="research-item"><strong>🛡️ Hot:</strong> Ransomware Recovery SaaS</div>
+                    <a href="02-Research/Protection-SaaS-Ideas.md" style="color: #e63946; font-size: 0.8em;">→ View Full Research</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>🔒 Security Status</h2>
+                <div id="security-content">
+                    <div class="security-item"><span style="color: #2ecc71;">●</span> Mac: SSH + Caffeinated (16hrs)</div>
+                    <div class="security-item"><span style="color: #2ecc71;">●</span> Kali: Gateway Active</div>
+                    <div class="security-item"><span style="color: #f39c12;">●</span> 2FA: Needs Review</div>
+                    <div class="security-item"><span style="color: #3498db;">●</span> Firewall: Active</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>📊 System Stats</h2>
+                <div id="stats-content">
+                    <div class="stat-row"><span>💾 Memory:</span> <span id="mem-stats">Checking...</span></div>
+                    <div class="stat-row"><span>⏱️ Uptime:</span> <span id="uptime-stats">Checking...</span></div>
+                    <div class="stat-row"><span>📡 Gateway:</span> <span style="color: #2ecc71;">Active</span></div>
+                    <div class="stat-row"><span>🌐 Public IP:</span> <span id="ip-stats">Checking...</span></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>📋 To-Do (click to expand)</h2>
+                <div id="todo-content">Loading...</div>
             </div>
             
             <div class="card">
@@ -608,3 +644,39 @@
     </script>
 </body>
 </html>
+
+// Stats fetching
+async function fetchStats() {
+    try {
+        // Memory usage
+        const memRes = await fetch('/api/status');
+        if (memRes.ok) {
+            document.getElementById('mem-stats').textContent = 'Active';
+        }
+    } catch (e) {
+        document.getElementById('mem-stats').textContent = 'Error';
+    }
+    
+    // Uptime
+    try {
+        const uptime = process.uptime();
+        const hours = Math.floor(uptime / 3600);
+        const mins = Math.floor((uptime % 3600) / 60);
+        document.getElementById('uptime-stats').textContent = `${hours}h ${mins}m`;
+    } catch (e) {
+        document.getElementById('uptime-stats').textContent = 'Unknown';
+    }
+    
+    // IP address
+    try {
+        const ipRes = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipRes.json();
+        document.getElementById('ip-stats').textContent = ipData.ip;
+    } catch (e) {
+        document.getElementById('ip-stats').textContent = 'Private';
+    }
+}
+
+// Fetch stats every 30 seconds
+setInterval(fetchStats, 30000);
+fetchStats();
