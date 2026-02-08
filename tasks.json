@@ -1,0 +1,22 @@
+{
+  "working": {
+    "title": "🌐 Setting up Playwright automation",
+    "detail": "Logging into Twitter via browser"
+  },
+  "todo": [
+    { "title": "Build Edward Dashboard Web UI", "priority": "high" },
+    { "title": "Configure bird CLI for Twitter", "priority": "high" },
+    { "title": "Set up GitHub CLI on Mac", "priority": "medium" },
+    { "title": "Re-authenticate Gmail OAuth", "priority": "medium" }
+  ],
+  "queue": [
+    { "title": "Check Gmail for Shopify $40 receipt", "priority": "medium" },
+    { "title": "Explore ReviewIt codebase", "priority": "low" },
+    { "title": "Install Homebrew on Mac", "priority": "low" }
+  ],
+  "done": [
+    { "title": "Install Playwright on Mac", "time": "Today" },
+    { "title": "Set up golfhome workspace", "time": "Today" },
+    { "title": "Configure git for edwardclawdbot", "time": "Today" }
+  ]
+}
