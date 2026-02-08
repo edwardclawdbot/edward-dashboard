@@ -6,29 +6,34 @@
   },
   "todo": [
     {
-      "title": "✅ Twitter/X - CONFIGURED!",
+      "title": "Twitter/X - CONFIGURED!",
       "priority": "high",
-      "notes": "Bird CLI working! Sam copied cookies from Chrome DevTools to Apple Notes. Commands: bird home, bird news, bird search, bird tweet"
+      "notes": "Bird CLI working! Commands: bird home, bird news, bird search, bird follow"
     },
     {
       "title": "Set up GitHub CLI on Mac",
       "priority": "medium",
-      "notes": "Need Homebrew first. Can use git directly with PAT for now."
+      "notes": "Need to install gh on Mac for edwardclawdbot account"
     },
     {
       "title": "Re-authenticate Gmail OAuth",
       "priority": "medium",
-      "notes": "Token expired. Need to run 'gog auth add' with browser."
+      "notes": "Token expired. Run 'gog auth add edwardclawdbot@gmail.com' in browser"
+    },
+    {
+      "title": "SaaS Research - Niche Validation",
+      "priority": "high",
+      "notes": "Started researching profitable niches. Created ~/projects/saas-ideas/IDEAS.md"
     },
     {
       "title": "Install Codex CLI on Mac",
       "priority": "low",
-      "notes": "For use with Cursor IDE. Prefer using Cursor directly with Opus 4.6."
+      "notes": "For use with Cursor IDE"
     },
     {
-      "title": "🌱 Golfhome - Brainstorming Phase",
+      "title": "Golfhome - Brainstorming Phase",
       "priority": "low",
-      "notes": "Sam wants to make golfhome a STATISTICS platform (scores, handicap, rounds) NOT just news. Brainstorming paused. Will start building when ready!"
+      "notes": "Sam wants golf statistics platform. Paused until vision confirmed."
     }
   ],
   "queue": [
@@ -40,8 +45,11 @@
   ],
   "done": [
     { "title": "Build Edward Dashboard Web UI", "time": "Today" },
+    { "title": "Dashboard UI refresh", "time": "Today" },
     { "title": "Install Playwright on Mac", "time": "Today" },
     { "title": "Set up golfhome workspace", "time": "Today" },
-    { "title": "Add real-time SSE updates", "time": "Today" }
+    { "title": "Add real-time SSE updates", "time": "Today" },
+    { "title": "Follow golf accounts", "time": "Today" },
+    { "title": "Follow BYU & Buccaneers", "time": "Today" }
   ]
 }
