@@ -60,6 +60,11 @@
       "notes": "Created apple-calendar.py automation script. Commands: ~/calendar-events, ~/calendar-add"
     },
     {
+      "title": "Edward Calendar - NEEDS SETUP",
+      "priority": "high",
+      "notes": "Want to add Edward to calendar. Options: (1) Google Calendar via gog, (2) Shared Apple Calendar. Let's use Google Calendar!"
+    },
+    {
       "title": "SaaS Research - Deep Dive",
       "priority": "high",
       "notes": "Now with web browsing, can research niches on Reddit, Product Hunt, Indie Hackers"
@@ -72,7 +77,7 @@
     {
       "title": "Re-authenticate Gmail OAuth",
       "priority": "medium",
-      "notes": "Token expired. Run 'gog auth add edwardclawdbot@gmail.com' in browser"
+      "notes": "Token expired. Run 'gog auth add edwardclawdbot@gmail.com' in browser to enable calendar"
     },
     {
       "title": "Install Codex CLI on Mac",
