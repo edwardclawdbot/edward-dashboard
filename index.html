@@ -8,113 +8,136 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #fff;
+            background: #000;
+            color: #f0f0f0;
             min-height: 100vh;
             padding: 20px;
+            -webkit-font-smoothing: antialiased;
         }
         .container { max-width: 1200px; margin: 0 auto; }
-        h1 { text-align: center; margin-bottom: 30px; font-size: 2.5em; }
+        h1 { text-align: center; margin-bottom: 30px; font-size: 2.5em; color: #fff; }
         .status-bar {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 14px;
             margin-bottom: 40px;
             flex-wrap: wrap;
         }
         .status-item {
-            background: rgba(255,255,255,0.1);
+            background: #111;
+            border: 1px solid rgba(255,255,255,0.06);
             padding: 15px 30px;
-            border-radius: 10px;
+            border-radius: 12px;
             text-align: center;
+            transition: border-color 0.2s;
         }
-        .status-item .label { font-size: 0.9em; opacity: 0.7; }
-        .status-item .value { font-size: 1.5em; font-weight: bold; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+        .status-item:hover { border-color: rgba(230,57,70,0.3); }
+        .status-item .label { font-size: 0.8em; color: #555; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .status-item .value { font-size: 1.4em; font-weight: bold; margin-top: 4px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 16px; }
         .card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
+            background: #111;
+            border-radius: 14px;
             padding: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: border-color 0.25s;
         }
+        .card:hover { border-color: rgba(255,255,255,0.1); }
         .card h2 { 
             margin-bottom: 15px; 
             padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 0.95em;
         }
         .task-item {
             padding: 12px;
-            margin: 8px 0;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
+            margin: 6px 0;
+            background: #0a0a0a;
+            border-radius: 10px;
             cursor: pointer;
             transition: all 0.2s;
+            border: 1px solid transparent;
         }
-        .task-item:hover { background: rgba(255,255,255,0.1); }
+        .task-item:hover { background: #161616; border-color: rgba(255,255,255,0.06); }
         .task-header {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        .task-title { flex: 1; }
+        .task-title { flex: 1; font-size: 0.92em; }
         .task-badge {
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75em;
-            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.7em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .task-notes {
             display: none;
             margin-top: 10px;
-            padding: 10px;
-            background: rgba(0,0,0,0.2);
-            border-radius: 8px;
-            font-size: 0.9em;
-            line-height: 1.5;
+            padding: 10px 12px;
+            background: rgba(255,255,255,0.02);
+            border-left: 2px solid rgba(230,57,70,0.4);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.85em;
+            line-height: 1.6;
+            color: #888;
         }
         .task-notes.show { display: block; }
         .expand-icon {
             transition: transform 0.2s;
             font-size: 0.8em;
+            color: #555;
         }
-        .task-item.expanded .expand-icon { transform: rotate(90deg); }
-        .status-working { background: #f39c12; color: #000; }
-        .status-queue { background: #3498db; }
-        .status-todo { background: #9b59b6; }
-        .status-done { background: #27ae60; }
-        .emoji { font-size: 1.2em; }
+        .task-item.expanded .expand-icon { transform: rotate(90deg); color: #e63946; }
+        .status-working { background: rgba(230,57,70,0.15); color: #e63946; }
+        .status-queue { background: rgba(255,255,255,0.06); color: #888; }
+        .status-todo { background: rgba(230,57,70,0.1); color: rgba(230,57,70,0.7); }
+        .status-done { background: rgba(255,255,255,0.04); color: #555; }
+        .emoji { font-size: 1.1em; }
         .timestamp { 
             font-size: 0.8em; 
-            opacity: 0.5; 
+            color: #555;
             margin-left: auto;
         }
         #current-task {
             grid-column: 1 / -1;
-            background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%);
+            background: linear-gradient(135deg, #111 0%, rgba(230,57,70,0.08) 100%);
+            border: 1px solid rgba(230,57,70,0.25);
+            position: relative;
+            overflow: hidden;
         }
-        #current-task h2 { border-bottom-color: rgba(255,255,255,0.2); }
+        #current-task::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #e63946, transparent);
+        }
+        #current-task h2 { border-bottom-color: rgba(230,57,70,0.2); color: #e63946; }
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
+            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(230,57,70,0.4); }
+            50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(230,57,70,0); }
         }
         .active-indicator {
             width: 10px;
             height: 10px;
-            background: #27ae60;
+            background: #e63946;
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
-        .idle-indicator { background: #7f8c8d; animation: none; }
+        .idle-indicator { background: #555; animation: none; }
         #last-updated {
             text-align: center;
             margin-top: 30px;
-            opacity: 0.7;
-            font-size: 0.9em;
+            color: #555;
+            font-size: 0.8em;
         }
-        #activity-time { color: #f39c12; font-weight: bold; }
+        #activity-time { color: #e63946; font-weight: bold; }
         .quick-actions {
             display: flex;
             gap: 10px;
@@ -124,15 +147,174 @@
         }
         .quick-btn {
             padding: 8px 16px;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 20px;
-            color: #fff;
+            background: #111;
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 8px;
+            color: #888;
             cursor: pointer;
-            font-size: 0.9em;
+            font-size: 0.85em;
+            font-weight: 500;
             transition: all 0.2s;
         }
-        .quick-btn:hover { background: rgba(255,255,255,0.2); }
+        .quick-btn:hover { background: #1a1a1a; border-color: rgba(230,57,70,0.3); color: #e63946; }
+        /* Request card styles */
+        .req-card {
+            padding: 16px;
+            margin: 8px 0;
+            background: #0a0a0a;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: border-color 0.2s;
+        }
+        .req-card:hover { border-color: rgba(52,152,219,0.3); }
+        .req-card.status-approved { border-left: 3px solid #27ae60; }
+        .req-card.status-rejected { border-left: 3px solid #e74c3c; opacity: 0.6; }
+        .req-card.status-pending { border-left: 3px solid #3498db; }
+        .req-top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .req-emoji { font-size: 1.3em; }
+        .req-name { font-weight: 600; font-size: 1em; flex: 1; }
+        .req-status-badge {
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.7em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .req-badge-pending { background: rgba(52,152,219,0.15); color: #3498db; }
+        .req-badge-approved { background: rgba(39,174,96,0.15); color: #27ae60; }
+        .req-badge-rejected { background: rgba(231,76,60,0.15); color: #e74c3c; }
+        .req-details {
+            margin-top: 12px;
+            padding: 12px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 8px;
+            font-size: 0.85em;
+            line-height: 1.7;
+            color: #888;
+        }
+        .req-details code {
+            background: rgba(0,0,0,0.4);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+        .req-detail-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        .req-detail-label {
+            color: #555;
+            font-weight: 600;
+            min-width: 60px;
+            flex-shrink: 0;
+        }
+        .req-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .req-btn {
+            padding: 8px 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.85em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .req-btn:active { transform: scale(0.96); }
+        .req-btn-approve {
+            background: rgba(39,174,96,0.15);
+            color: #27ae60;
+            border: 1px solid rgba(39,174,96,0.3);
+        }
+        .req-btn-approve:hover { background: rgba(39,174,96,0.25); }
+        .req-btn-reject {
+            background: rgba(231,76,60,0.1);
+            color: #e74c3c;
+            border: 1px solid rgba(231,76,60,0.2);
+        }
+        .req-btn-reject:hover { background: rgba(231,76,60,0.2); }
+        .req-notes-input {
+            flex: 1;
+            min-width: 150px;
+            padding: 8px 12px;
+            background: #111;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            color: #ccc;
+            font-size: 0.85em;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .req-notes-input:focus { border-color: rgba(52,152,219,0.5); }
+        .req-notes-input::placeholder { color: #444; }
+        .req-btn-note {
+            padding: 8px 14px;
+            background: rgba(255,255,255,0.05);
+            color: #888;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .req-btn-note:hover { background: rgba(255,255,255,0.1); color: #ccc; }
+        .req-existing-notes {
+            margin-top: 8px;
+            padding: 8px 12px;
+            background: rgba(52,152,219,0.05);
+            border-left: 2px solid rgba(52,152,219,0.3);
+            border-radius: 0 6px 6px 0;
+            font-size: 0.82em;
+            color: #7ab3d4;
+        }
+        .req-decided {
+            font-size: 0.75em;
+            color: #555;
+            margin-top: 4px;
+        }
+        .req-safe { color: #27ae60; }
+        .req-unsafe { color: #e67e22; }
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 12px 20px;
+            background: #1a1a1a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 0.9em;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s;
+        }
+        .toast.show { opacity: 1; transform: translateY(0); }
+        .toast.success { border-color: rgba(39,174,96,0.4); }
+        .toast.error { border-color: rgba(231,76,60,0.4); }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 3px; }
+        @media (max-width: 768px) {
+            body { padding: 16px; }
+            h1 { font-size: 1.8em; }
+            .grid { grid-template-columns: 1fr; }
+            .status-bar { gap: 8px; }
+            .status-item { padding: 12px 20px; }
+            .req-actions { flex-direction: column; }
+            .req-notes-input { width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -188,11 +370,13 @@
                 <div id="done-content">Loading...</div>
             </div>
             
-            <div class="card" style="border-color: #3498db;">
-                <h2>🎁 Requests <span style="font-size: 0.7em; opacity: 0.6;">- Skills awaiting approval</span></h2>
+            <div class="card" id="requests-card" style="grid-column: 1 / -1; border-color: rgba(52,152,219,0.25);">
+                <h2>🎁 Requests <span style="font-size: 0.7em; opacity: 0.6;">— Approve, reject, or add notes</span></h2>
                 <div id="requests-content">Loading...</div>
             </div>
         </div>
+
+        <div id="toast" class="toast"></div>
 
         <div id="last-updated">
             Last updated: <span id="update-time">-</span> | 
@@ -333,23 +517,36 @@
                     </div>
                 `).join('') || '<div class="task-item">Nothing done yet</div>';
                 
-                // Requests
+                // Requests — interactive cards
                 document.getElementById('requests-content').innerHTML = (tasks.requests || []).map(req => `
-                    <div class="task-item" onclick="toggleNotes('req-notes-${req.id}')" style="border-left: 3px solid #3498db;">
-                        <div class="task-header">
-                            <span class="expand-icon">▶</span>
-                            <span class="emoji">${req.emoji}</span>
-                            <span class="task-title">${req.skill}</span>
-                            <span class="task-badge status-queue">${req.status}</span>
+                    <div class="req-card status-${req.status}" id="req-card-${req.id}">
+                        <div class="req-top">
+                            <span class="req-emoji">${req.emoji}</span>
+                            <span class="req-name">${req.skill}</span>
+                            <span class="req-status-badge req-badge-${req.status}">${req.status}</span>
+                            <span class="${req.safe ? 'req-safe' : 'req-unsafe'}">${req.safe ? '✅ safe' : '⚠️ review'}</span>
                         </div>
-                        ${req.reason ? `<div class="task-notes" id="req-notes-${req.id}">
-                            <strong>Why:</strong> ${req.reason}<br><br>
-                            <strong>Install:</strong> <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;">${req.install}</code><br><br>
-                            ${req.notes ? `<strong>Notes:</strong> ${req.notes}<br><br>` : ''}
-                            <strong>Safe:</strong> ${req.safe ? '✅ Yes' : '⚠️ Review needed'}
-                        </div>` : ''}
+                        <div class="req-details">
+                            <div class="req-detail-row"><span class="req-detail-label">Why</span><span>${req.reason || '—'}</span></div>
+                            <div class="req-detail-row"><span class="req-detail-label">Install</span><code>${req.install || '—'}</code></div>
+                            ${req.decidedAt ? '<div class="req-decided">Decided ' + new Date(req.decidedAt).toLocaleString() + '</div>' : ''}
+                        </div>
+                        ${req.notes ? '<div class="req-existing-notes">📝 ' + req.notes + '</div>' : ''}
+                        ${req.status === 'pending' ? `
+                        <div class="req-actions">
+                            <button class="req-btn req-btn-approve" onclick="handleRequest(${req.id}, 'approved')">✓ Approve</button>
+                            <button class="req-btn req-btn-reject" onclick="handleRequest(${req.id}, 'rejected')">✕ Reject</button>
+                            <input type="text" class="req-notes-input" id="req-note-input-${req.id}" placeholder="Add a note..." onkeydown="if(event.key==='Enter')saveNote(${req.id})" />
+                            <button class="req-btn req-btn-note" onclick="saveNote(${req.id})">Save Note</button>
+                        </div>` : `
+                        <div class="req-actions" style="justify-content: flex-end;">
+                            <input type="text" class="req-notes-input" id="req-note-input-${req.id}" placeholder="Update note..." value="${(req.notes || '').replace(/"/g, '&amp;quot;')}" onkeydown="if(event.key==='Enter')saveNote(${req.id})" />
+                            <button class="req-btn req-btn-note" onclick="saveNote(${req.id})">Save Note</button>
+                            ${req.status === 'rejected' ? '<button class="req-btn req-btn-approve" onclick="handleRequest(' + req.id + ', \'approved\')" style="font-size:0.8em;">Undo → Approve</button>' : ''}
+                            ${req.status === 'approved' ? '<button class="req-btn req-btn-reject" onclick="handleRequest(' + req.id + ', \'pending\')" style="font-size:0.8em;">Undo → Pending</button>' : ''}
+                        </div>`}
                     </div>
-                `).join('') || '<div class="task-item">No pending requests</div>';
+                `).join('') || '<div class="req-card" style="text-align:center;color:#555;">No pending requests</div>';
                 
                 const total = (tasks.todo || []).length + (tasks.queue || []).length;
                 document.getElementById('task-count').textContent = total;
@@ -357,6 +554,52 @@
             } catch (e) {
                 console.error('Error loading tasks:', e);
             }
+        }
+        
+        // Request actions
+        async function handleRequest(id, status) {
+            try {
+                const noteInput = document.getElementById('req-note-input-' + id);
+                const body = { status };
+                if (noteInput && noteInput.value.trim()) {
+                    body.notes = noteInput.value.trim();
+                }
+                const res = await fetch('/api/requests/' + id, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+                if (!res.ok) throw new Error('Failed');
+                showToast(status === 'approved' ? '✓ Approved!' : status === 'rejected' ? '✕ Rejected' : '↩ Reset to pending', 'success');
+                loadTasks();
+            } catch (e) {
+                showToast('Error: ' + e.message, 'error');
+            }
+        }
+        
+        async function saveNote(id) {
+            const input = document.getElementById('req-note-input-' + id);
+            if (!input || !input.value.trim()) return;
+            try {
+                const res = await fetch('/api/requests/' + id, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ notes: input.value.trim() })
+                });
+                if (!res.ok) throw new Error('Failed');
+                showToast('📝 Note saved', 'success');
+                loadTasks();
+            } catch (e) {
+                showToast('Error: ' + e.message, 'error');
+            }
+        }
+        
+        function showToast(message, type) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast ' + type + ' show';
+            clearTimeout(toast._timeout);
+            toast._timeout = setTimeout(() => { toast.className = 'toast'; }, 2500);
         }
         
         connectSSE();

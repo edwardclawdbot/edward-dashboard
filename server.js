@@ -89,6 +89,40 @@ const server = http.createServer((req, res) => {
         return;
     }
     
+    // API to update a specific request (approve, reject, add notes)
+    const requestMatch = url.pathname.match(/^\/api\/requests\/(\d+)$/);
+    if (requestMatch && req.method === 'PATCH') {
+        const requestId = parseInt(requestMatch[1]);
+        let body = '';
+        req.on('data', chunk => body += chunk);
+        req.on('end', () => {
+            try {
+                const update = JSON.parse(body);
+                const tasks = loadTasks();
+                const reqIdx = (tasks.requests || []).findIndex(r => r.id === requestId);
+                if (reqIdx === -1) {
+                    res.writeHead(404, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ error: 'Request not found' }));
+                    return;
+                }
+                // Apply updates (status, notes)
+                if (update.status) tasks.requests[reqIdx].status = update.status;
+                if (update.notes !== undefined) tasks.requests[reqIdx].notes = update.notes;
+                if (update.status === 'approved' || update.status === 'rejected') {
+                    tasks.requests[reqIdx].decidedAt = new Date().toISOString();
+                }
+                saveTasks(tasks);
+                currentStatus.lastActivity = new Date().toISOString();
+                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ success: true, request: tasks.requests[reqIdx] }));
+            } catch (e) {
+                res.writeHead(400, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ error: e.message }));
+            }
+        });
+        return;
+    }
+    
     // API to get current status
     if (url.pathname === '/api/status') {
         const tasks = loadTasks();
