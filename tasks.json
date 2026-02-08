@@ -55,6 +55,11 @@
       "notes": "Playwright installed, can browse websites via Python script on Mac"
     },
     {
+      "title": "Apple Calendar - WORKING!",
+      "priority": "high",
+      "notes": "Created apple-calendar.py automation script. Commands: ~/calendar-events, ~/calendar-add"
+    },
+    {
       "title": "SaaS Research - Deep Dive",
       "priority": "high",
       "notes": "Now with web browsing, can research niches on Reddit, Product Hunt, Indie Hackers"
