@@ -1,8 +1,8 @@
 {
   "working": {
-    "title": "🔍 Investigating skills & Dashboard UI",
-    "detail": "Checking blogwatcher, obsidian, things-mac, sag",
-    "started": "20:08"
+    "title": "🌐 Setting up web browsing on Mac",
+    "detail": "Playwright installed, browser automation working",
+    "started": "20:27"
   },
   "requests": [
     {
@@ -50,6 +50,16 @@
       "notes": "Bird CLI working! Commands: bird home, bird news, bird search, bird follow"
     },
     {
+      "title": "Web browsing on Mac - WORKING!",
+      "priority": "high",
+      "notes": "Playwright installed, can browse websites via Python script on Mac"
+    },
+    {
+      "title": "SaaS Research - Deep Dive",
+      "priority": "high",
+      "notes": "Now with web browsing, can research niches on Reddit, Product Hunt, Indie Hackers"
+    },
+    {
       "title": "Set up GitHub CLI on Mac",
       "priority": "medium",
       "notes": "Need to install gh on Mac for edwardclawdbot account"
@@ -58,11 +68,6 @@
       "title": "Re-authenticate Gmail OAuth",
       "priority": "medium",
       "notes": "Token expired. Run 'gog auth add edwardclawdbot@gmail.com' in browser"
-    },
-    {
-      "title": "SaaS Research - Niche Validation",
-      "priority": "high",
-      "notes": "Started researching profitable niches. Created ~/projects/saas-ideas/IDEAS.md"
     },
     {
       "title": "Install Codex CLI on Mac",
