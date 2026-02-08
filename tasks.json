@@ -1,8 +1,8 @@
 {
   "working": {
-    "title": "📧 Setting up daily golf brief at 7am",
-    "detail": "Cron job created, needs Gmail OAuth for emailing",
-    "started": "23:04"
+    "title": "🌅 Morning research complete",
+    "detail": "Protection SaaS ideas, security audit, Obsidian vault all set up",
+    "started": "23:37"
   },
   "requests": [
     {
@@ -45,56 +45,41 @@
   ],
   "todo": [
     {
-      "title": "Twitter/X - CONFIGURED!",
+      "title": "📧 Send BYU basketball email (blocked by gog OAuth)",
       "priority": "high",
-      "notes": "Bird CLI working! Commands: bird home, bird news, bird search, bird follow"
+      "notes": "Need to re-authenticate gog. Run 'gog auth add edwardclawdbot@gmail.com' when Sam available"
     },
     {
-      "title": "Web browsing on Mac - WORKING!",
+      "title": "💡 Research protection SaaS ideas",
       "priority": "high",
-      "notes": "Playwright installed, can browse websites via Python script on Mac"
+      "notes": "COMPLETED: AI Content Detection, Certificate Lifecycle Management, Ransomware Recovery. Full research in ~/obsidian-vault/"
     },
     {
-      "title": "Apple Calendar - WORKING!",
+      "title": "📓 Set up Obsidian second brain",
       "priority": "high",
-      "notes": "Created apple-calendar.py automation script. Commands: ~/calendar-events, ~/calendar-add"
+      "notes": "COMPLETED: Created ~/obsidian-vault/ with research notes, security audit, morning report"
     },
     {
-      "title": "Edward Calendar - NEEDS SETUP",
+      "title": "🔐 Security audit (Kali + Mac)",
       "priority": "high",
-      "notes": "Want to add Edward to calendar. Options: (1) Google Calendar via gog, (2) Shared Apple Calendar. Let's use Google Calendar!"
+      "notes": "COMPLETED: No critical issues. Firewall needs enablement on Kali"
     },
     {
-      "title": "SaaS Research - Deep Dive",
+      "title": "🔥 Dashboard iteration",
       "priority": "high",
-      "notes": "Now with web browsing, can research niches on Reddit, Product Hunt, Indie Hackers"
+      "notes": "COMPLETED: Added research card, security status, system stats. Pushed to GitHub."
     },
     {
-      "title": "Set up GitHub CLI on Mac",
+      "title": "📦 Install obsidian-cli on Mac",
       "priority": "medium",
-      "notes": "Need to install gh on Mac for edwardclawdbot account"
-    },
-    {
-      "title": "Re-authenticate Gmail OAuth",
-      "priority": "medium",
-      "notes": "Token expired. Run 'gog auth add edwardclawdbot@gmail.com' in browser to enable calendar"
-    },
-    {
-      "title": "Install Codex CLI on Mac",
-      "priority": "low",
-      "notes": "For use with Cursor IDE"
-    },
-    {
-      "title": "Golfhome - Brainstorming Phase",
-      "priority": "low",
-      "notes": "Sam wants golf statistics platform. Paused until vision confirmed."
+      "notes": "brew not found. Alternative: Use web-based Obsidian or manual sync"
     }
   ],
   "queue": [
     {
-      "title": "Check Gmail for Shopify $40 receipt",
+      "title": "Re-authenticate Gmail OAuth",
       "priority": "medium",
-      "notes": "Search for receipt from shopify@shopify.com around Feb 7."
+      "notes": "Token expired. Run 'gog auth add edwardclawdbot@gmail.com' in browser"
     }
   ],
   "done": [
@@ -104,6 +89,10 @@
     { "title": "Set up golfhome workspace", "time": "Today" },
     { "title": "Add real-time SSE updates", "time": "Today" },
     { "title": "Follow golf accounts", "time": "Today" },
-    { "title": "Follow BYU & Buccaneers", "time": "Today" }
+    { "title": "Follow BYU & Buccaneers", "time": "Today" },
+    { "title": "Research protection SaaS ideas", "time": "Tonight" },
+    { "title": "Create Obsidian vault", "time": "Tonight" },
+    { "title": "Run security audit", "time": "Tonight" },
+    { "title": "Iterate dashboard with research card", "time": "Tonight" }
   ]
 }
