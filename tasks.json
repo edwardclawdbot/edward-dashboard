@@ -1,100 +1,56 @@
 {
   "working": {
-    "title": "🏌️ Golf Content System Built!",
-    "detail": "Tools, automation, research, and command center all set up",
-    "started": "23:43"
+    "title": "🌙 Night Shift Complete - 4 New Projects Built!",
+    "detail": "Shopping automation, inventory manager, cloud upload, health dashboard all created",
+    "started": "23:51"
   },
-  "requests": [
-    {
-      "id": 1,
-      "skill": "blogwatcher",
-      "emoji": "📰",
-      "reason": "Monitor competitor blogs for SaaS research - track industry news automatically",
-      "safe": true,
-      "install": "go install github.com/Hyaxia/blogwatcher/cmd/blogwatcher@latest",
-      "status": "pending"
-    },
-    {
-      "id": 2,
-      "skill": "obsidian",
-      "emoji": "💎",
-      "reason": "Knowledge management - store SaaS research notes, competitor intel, ideas",
-      "safe": true,
-      "install": "brew install yakitrak/yakitrak/obsidian-cli",
-      "status": "pending"
-    },
-    {
-      "id": 3,
-      "skill": "things-mac",
-      "emoji": "✅",
-      "reason": "Task management integration - add todos, track SaaS research tasks",
-      "safe": true,
-      "install": "GOBIN=/opt/homebrew/bin go install github.com/ossianhempel/things3-cli/cmd/things@latest",
-      "status": "pending"
-    },
-    {
-      "id": 4,
-      "skill": "sag",
-      "emoji": "🗣️",
-      "reason": "Voice storytelling for content - fun for presentations, not essential",
-      "safe": true,
-      "install": "brew install steipete/tap/sag",
-      "notes": "Requires ELEVENLABS_API_KEY ($22/month)",
-      "status": "pending"
-    }
-  ],
+  "requests": [],
   "todo": [
     {
       "title": "📧 Send BYU basketball email (blocked by gog OAuth)",
       "priority": "high",
-      "notes": "Need to re-authenticate gog. Run 'gog auth add edwardclawdbot@gmail.com' when Sam available"
+      "notes": "Need app password from https://myaccount.google.com/apppasswords"
     },
     {
-      "title": "🏌️ Research golf content strategy (COMPLETED)",
+      "title": "🏌️ Build golf content tools (COMPLETED)",
       "priority": "high",
-      "notes": "Full strategy in ~/obsidian-vault/02-Research/Golf-Content-Strategy.md"
+      "notes": "GitHub: edwardclawdbot/golf-content-tools"
     },
     {
-      "title": "🛠️ Build golf content tools suite (COMPLETED)",
+      "title": "🛠️ Build OpenClaw community tools (COMPLETED)",
       "priority": "high",
-      "notes": "Calendar, podcast outlines, Twitter threads, dashboard. GitHub: edwardclawdbot/golf-content-tools"
-    },
-    {
-      "title": "🌙 Set up Night Shift automation (COMPLETED)",
-      "priority": "high",
-      "notes": "Cron jobs at 2AM, 4AM, 6AM for autonomous research"
+      "notes": "Shopping, Inventory, Cloud Upload, Health Dashboard. GitHub: edwardclawdbot/openclaw-community-tools"
     },
     {
       "title": "📓 Set up Obsidian second brain (COMPLETED)",
       "priority": "high",
-      "notes": "Created ~/obsidian-vault/ with all research notes"
+      "notes": "7 research notes, full structure created"
+    },
+    {
+      "title": "🌙 Set up Night Shift automation (COMPLETED)",
+      "priority": "high",
+      "notes": "Cron at 2AM, 4AM, 6AM, 8AM for autonomous operation"
     },
     {
       "title": "🔐 Security audit (COMPLETED)",
       "priority": "high",
-      "notes": "No critical issues. Report in Obsidian"
+      "notes": "Kali + Mac both secure"
     },
     {
-      "title": "📦 Install obsidian-cli on Mac",
-      "priority": "medium",
-      "notes": "brew not found. Alternative: Use web-based Obsidian or manual sync"
+      "title": "💡 Research protection SaaS ideas (COMPLETED)",
+      "priority": "high",
+      "notes": "AI Content Detection, CLM, Ransomware Recovery"
     }
   ],
   "queue": [
     {
       "title": "Re-authenticate Gmail OAuth",
       "priority": "medium",
-      "notes": "Token expired. Run 'gog auth add edwardclawdbot@gmail.com' in browser"
+      "notes": "Token expired. Need app password."
     }
   ],
   "done": [
     { "title": "Build Edward Dashboard Web UI", "time": "Today" },
-    { "title": "Dashboard UI refresh", "time": "Today" },
-    { "title": "Install Playwright on Mac", "time": "Today" },
-    { "title": "Set up golfhome workspace", "time": "Today" },
-    { "title": "Add real-time SSE updates", "time": "Today" },
-    { "title": "Follow golf accounts", "time": "Today" },
-    { "title": "Follow BYU & Buccaneers", "time": "Today" },
     { "title": "Research protection SaaS ideas", "time": "Tonight" },
     { "title": "Create Obsidian vault", "time": "Tonight" },
     { "title": "Run security audit", "time": "Tonight" },
@@ -105,6 +61,14 @@
     { "title": "Create Twitter thread generator", "time": "Tonight" },
     { "title": "Build command center dashboard", "time": "Tonight" },
     { "title": "Set up Night Shift automation", "time": "Tonight" },
-    { "title": "Push golf tools to GitHub", "time": "Tonight" }
+    { "title": "Push golf tools to GitHub", "time": "Tonight" },
+    { "title": "Research OpenClaw community projects", "time": "Tonight" },
+    { "title": "Build shopping automation tool", "time": "Tonight" },
+    { "title": "Build inventory manager tool", "time": "Tonight" },
+    { "title": "Build cloud upload service", "time": "Tonight" },
+    { "title": "Build health dashboard tool", "time": "Tonight" },
+    { "title": "Push community tools to GitHub", "time": "Tonight" },
+    { "title": "Create comprehensive overnight report", "time": "Tonight" },
+    { "title": "Set up 8AM Discord report", "time": "Tonight" }
   ]
 }
