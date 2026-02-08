@@ -1,0 +1,42 @@
+{
+  "working": {
+    "title": "🔧 Setting up Codex in Cursor",
+    "detail": "Configuring Cursor IDE for coding tasks",
+    "started": "18:44"
+  },
+  "todo": [
+    {
+      "title": "Configure bird CLI for Twitter",
+      "priority": "high",
+      "notes": "Need to log in via browser and extract cookies. X.com has phone verification."
+    },
+    {
+      "title": "Set up GitHub CLI on Mac",
+      "priority": "medium",
+      "notes": "Need Homebrew first. Can use git directly with PAT for now."
+    },
+    {
+      "title": "Re-authenticate Gmail OAuth",
+      "priority": "medium",
+      "notes": "Token expired. Need to run 'gog auth add' with browser."
+    },
+    {
+      "title": "Install Codex CLI on Mac",
+      "priority": "low",
+      "notes": "For use with Cursor IDE. Prefer using Cursor directly with Opus 4.6."
+    }
+  ],
+  "queue": [
+    {
+      "title": "Check Gmail for Shopify $40 receipt",
+      "priority": "medium",
+      "notes": "Search for receipt from shopify@shopify.com around Feb 7."
+    }
+  ],
+  "done": [
+    { "title": "Build Edward Dashboard Web UI", "time": "Today" },
+    { "title": "Install Playwright on Mac", "time": "Today" },
+    { "title": "Set up golfhome workspace", "time": "Today" },
+    { "title": "Add real-time SSE updates", "time": "Today" }
+  ]
+}
