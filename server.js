@@ -92,9 +92,17 @@ const server = http.createServer((req, res) => {
     // API to get current status
     if (url.pathname === '/api/status') {
         const tasks = loadTasks();
-        currentStatus.working = tasks.working || currentStatus.working;
+        // Return full task data including requests
+        const responseData = {
+            ...currentStatus,
+            working: tasks.working || currentStatus.working,
+            todo: tasks.todo || [],
+            queue: tasks.queue || [],
+            done: tasks.done || [],
+            requests: tasks.requests || []
+        };
         res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify(currentStatus));
+        res.end(JSON.stringify(responseData));
         return;
     }
     

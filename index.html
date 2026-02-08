@@ -187,6 +187,11 @@
                 <h2>✅ Recently Completed</h2>
                 <div id="done-content">Loading...</div>
             </div>
+            
+            <div class="card" style="border-color: #3498db;">
+                <h2>🎁 Requests <span style="font-size: 0.7em; opacity: 0.6;">- Skills awaiting approval</span></h2>
+                <div id="requests-content">Loading...</div>
+            </div>
         </div>
 
         <div id="last-updated">
@@ -327,6 +332,24 @@
                         </div>
                     </div>
                 `).join('') || '<div class="task-item">Nothing done yet</div>';
+                
+                // Requests
+                document.getElementById('requests-content').innerHTML = (tasks.requests || []).map(req => `
+                    <div class="task-item" onclick="toggleNotes('req-notes-${req.id}')" style="border-left: 3px solid #3498db;">
+                        <div class="task-header">
+                            <span class="expand-icon">▶</span>
+                            <span class="emoji">${req.emoji}</span>
+                            <span class="task-title">${req.skill}</span>
+                            <span class="task-badge status-queue">${req.status}</span>
+                        </div>
+                        ${req.reason ? `<div class="task-notes" id="req-notes-${req.id}">
+                            <strong>Why:</strong> ${req.reason}<br><br>
+                            <strong>Install:</strong> <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;">${req.install}</code><br><br>
+                            ${req.notes ? `<strong>Notes:</strong> ${req.notes}<br><br>` : ''}
+                            <strong>Safe:</strong> ${req.safe ? '✅ Yes' : '⚠️ Review needed'}
+                        </div>` : ''}
+                    </div>
+                `).join('') || '<div class="task-item">No pending requests</div>';
                 
                 const total = (tasks.todo || []).length + (tasks.queue || []).length;
                 document.getElementById('task-count').textContent = total;
