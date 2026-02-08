@@ -1,8 +1,8 @@
 {
   "working": {
-    "title": "🌐 Setting up web browsing on Mac",
-    "detail": "Playwright installed, browser automation working",
-    "started": "20:27"
+    "title": "📧 Setting up daily golf brief at 7am",
+    "detail": "Cron job created, needs Gmail OAuth for emailing",
+    "started": "23:04"
   },
   "requests": [
     {
