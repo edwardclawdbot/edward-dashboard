@@ -1,14 +1,14 @@
 {
   "working": {
-    "title": "🔧 Setting up Codex in Cursor",
-    "detail": "Configuring Cursor IDE for coding tasks",
-    "started": "18:44"
+    "title": "🎉 Twitter/X configured!",
+    "detail": "Bird CLI working - can read tweets!",
+    "started": "19:24"
   },
   "todo": [
     {
-      "title": "Configure bird CLI for Twitter",
+      "title": "✅ Twitter/X - CONFIGURED!",
       "priority": "high",
-      "notes": "Need to log in via browser and extract cookies. X.com has phone verification."
+      "notes": "Bird CLI working! Sam copied cookies from Chrome DevTools to Apple Notes. Commands: bird home, bird news, bird search, bird tweet"
     },
     {
       "title": "Set up GitHub CLI on Mac",
@@ -24,6 +24,11 @@
       "title": "Install Codex CLI on Mac",
       "priority": "low",
       "notes": "For use with Cursor IDE. Prefer using Cursor directly with Opus 4.6."
+    },
+    {
+      "title": "🌱 Golfhome - Brainstorming Phase",
+      "priority": "low",
+      "notes": "Sam wants to make golfhome a STATISTICS platform (scores, handicap, rounds) NOT just news. Brainstorming paused. Will start building when ready!"
     }
   ],
   "queue": [
