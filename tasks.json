@@ -1,9 +1,48 @@
 {
   "working": {
-    "title": "🔍 Researching SaaS niches",
-    "detail": "Local services, Shopify apps, fitness studios",
-    "started": "19:57"
+    "title": "🔍 Investigating skills & Dashboard UI",
+    "detail": "Checking blogwatcher, obsidian, things-mac, sag",
+    "started": "20:08"
   },
+  "requests": [
+    {
+      "id": 1,
+      "skill": "blogwatcher",
+      "emoji": "📰",
+      "reason": "Monitor competitor blogs for SaaS research - track industry news automatically",
+      "safe": true,
+      "install": "go install github.com/Hyaxia/blogwatcher/cmd/blogwatcher@latest",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "skill": "obsidian",
+      "emoji": "💎",
+      "reason": "Knowledge management - store SaaS research notes, competitor intel, ideas",
+      "safe": true,
+      "install": "brew install yakitrak/yakitrak/obsidian-cli",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "skill": "things-mac",
+      "emoji": "✅",
+      "reason": "Task management integration - add todos, track SaaS research tasks",
+      "safe": true,
+      "install": "GOBIN=/opt/homebrew/bin go install github.com/ossianhempel/things3-cli/cmd/things@latest",
+      "status": "pending"
+    },
+    {
+      "id": 4,
+      "skill": "sag",
+      "emoji": "🗣️",
+      "reason": "Voice storytelling for content - fun for presentations, not essential",
+      "safe": true,
+      "install": "brew install steipete/tap/sag",
+      "notes": "Requires ELEVENLABS_API_KEY ($22/month)",
+      "status": "pending"
+    }
+  ],
   "todo": [
     {
       "title": "Twitter/X - CONFIGURED!",
