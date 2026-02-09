@@ -1,47 +1,42 @@
 {
   "working": {
-    "title": "✅ Calendar Integration Complete!",
-    "detail": "edwardclawdbot@gmail.com calendar now connected via Apple Calendar",
-    "started": "21:55"
+    "title": "🏌️ Building Golf Tournament Tracker",
+    "detail": "Python tool to track tournaments, sync with calendar, generate content",
+    "started": "22:12"
   },
   "requests": [],
   "todo": [
     {
-      "title": "✅ Apple Calendar Connected (COMPLETED)",
+      "title": "🍎 Mac Caffeinated (24 hours)",
       "priority": "high",
-      "notes": "edwardclawdbot@gmail.com calendar accessible. Commands: ~/projects/calendar-edward.py"
+      "notes": "Running until 10:01 PM tomorrow"
     },
     {
-      "title": "🍎 Mac Remote Control (COMPLETED)",
-      "priority": "high",
-      "notes": "Full SSH access, can launch apps, run scripts, research golf"
+      "title": "📅 Calendar Integration",
+      "priority": "high", 
+      "notes": "edwardclawdbot@gmail.com connected. Waiting for Sam's personal calendar subscription."
     },
     {
-      "title": "✅ Email Access Fixed (COMPLETED)",
-      "priority": "high",
-      "notes": "App password: qddxyepqsdfpimoe. Script: ~/projects/email-edward.py"
+      "title": "📦 Install Obsidian",
+      "priority": "medium",
+      "notes": "Download page opened on Mac. Sam installing manually."
     },
     {
-      "title": "🏌️ Golf Content Tools (COMPLETED)",
+      "title": "🏌️ Golf Tournament Tracker (BUILDING)",
       "priority": "high",
-      "notes": "GitHub: edwardclawdbot/golf-content-tools"
+      "notes": "Python tool: ~/projects/golf-tournament-tracker.py"
     },
     {
-      "title": "🛠️ Community Tools (COMPLETED)",
-      "priority": "high",
-      "notes": "Shopping, Inventory, Cloud Upload, Health Dashboard"
-    },
-    {
-      "title": "📓 Obsidian Second Brain (COMPLETED)",
-      "priority": "high",
-      "notes": "7+ research notes created"
+      "title": "📊 Content Calendar Generator",
+      "priority": "high", 
+      "notes": "Ready to build around tournaments"
     }
   ],
   "queue": [],
   "done": [
     { "title": "Connect Apple Calendar", "time": "Today" },
-    { "title": "Fix Gmail email access", "time": "Today" },
-    { "title": "Demonstrate Mac remote control", "time": "Today" },
-    { "title": "Create calendar integration", "time": "Today" }
+    { "title": "Fix Gmail access", "time": "Today" },
+    { "title": "Caffeinate Mac", "time": "Today" },
+    { "title": "Build Golf Tournament Tracker", "time": "Today" }
   ]
 }
