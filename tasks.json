@@ -1,15 +1,20 @@
 {
   "working": {
-    "title": "🍎 Live Mac Integration Active!",
-    "detail": "Demonstrated remote terminal control, research automation, app launching on Mac",
-    "started": "21:31"
+    "title": "✅ Calendar Integration Complete!",
+    "detail": "edwardclawdbot@gmail.com calendar now connected via Apple Calendar",
+    "started": "21:55"
   },
   "requests": [],
   "todo": [
     {
+      "title": "✅ Apple Calendar Connected (COMPLETED)",
+      "priority": "high",
+      "notes": "edwardclawdbot@gmail.com calendar accessible. Commands: ~/projects/calendar-edward.py"
+    },
+    {
       "title": "🍎 Mac Remote Control (COMPLETED)",
       "priority": "high",
-      "notes": "Demonstrated: Terminal control, Chrome launching, research automation, file creation"
+      "notes": "Full SSH access, can launch apps, run scripts, research golf"
     },
     {
       "title": "✅ Email Access Fixed (COMPLETED)",
@@ -30,18 +35,13 @@
       "title": "📓 Obsidian Second Brain (COMPLETED)",
       "priority": "high",
       "notes": "7+ research notes created"
-    },
-    {
-      "title": "📅 Sync golf calendar",
-      "priority": "medium",
-      "notes": "Need .ics file or Calendar API"
     }
   ],
   "queue": [],
   "done": [
-    { "title": "Build Edward Dashboard Web UI", "time": "Today" },
+    { "title": "Connect Apple Calendar", "time": "Today" },
     { "title": "Fix Gmail email access", "time": "Today" },
     { "title": "Demonstrate Mac remote control", "time": "Today" },
-    { "title": "Create live work demo", "time": "Today" }
+    { "title": "Create calendar integration", "time": "Today" }
   ]
 }
