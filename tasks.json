@@ -1,74 +1,47 @@
 {
   "working": {
-    "title": "✅ Email Access Fixed!",
-    "detail": "Gmail app password working, can now send emails and sync calendar",
-    "started": "21:20"
+    "title": "🍎 Live Mac Integration Active!",
+    "detail": "Demonstrated remote terminal control, research automation, app launching on Mac",
+    "started": "21:31"
   },
   "requests": [],
   "todo": [
     {
-      "title": "✅ Email Access Fixed (COMPLETED)",
+      "title": "🍎 Mac Remote Control (COMPLETED)",
       "priority": "high",
-      "notes": "App password: qddxyepqsdfpimoe. Email script: ~/projects/email-edward.py"
+      "notes": "Demonstrated: Terminal control, Chrome launching, research automation, file creation"
     },
     {
-      "title": "🏌️ Build golf content tools (COMPLETED)",
+      "title": "✅ Email Access Fixed (COMPLETED)",
+      "priority": "high",
+      "notes": "App password: qddxyepqsdfpimoe. Script: ~/projects/email-edward.py"
+    },
+    {
+      "title": "🏌️ Golf Content Tools (COMPLETED)",
       "priority": "high",
       "notes": "GitHub: edwardclawdbot/golf-content-tools"
     },
     {
-      "title": "🛠️ Build OpenClaw community tools (COMPLETED)",
+      "title": "🛠️ Community Tools (COMPLETED)",
       "priority": "high",
-      "notes": "Shopping, Inventory, Cloud Upload, Health Dashboard. GitHub: edwardclawdbot/openclaw-community-tools"
+      "notes": "Shopping, Inventory, Cloud Upload, Health Dashboard"
     },
     {
-      "title": "📓 Set up Obsidian second brain (COMPLETED)",
+      "title": "📓 Obsidian Second Brain (COMPLETED)",
       "priority": "high",
-      "notes": "7 research notes, full structure created"
-    },
-    {
-      "title": "🌙 Set up Night Shift automation (COMPLETED)",
-      "priority": "high",
-      "notes": "Cron at 2AM, 4AM, 6AM, 8AM for autonomous operation"
-    },
-    {
-      "title": "🔐 Security audit (COMPLETED)",
-      "priority": "high",
-      "notes": "Kali + Mac both secure"
-    },
-    {
-      "title": "💡 Research protection SaaS ideas (COMPLETED)",
-      "priority": "high",
-      "notes": "AI Content Detection, CLM, Ransomware Recovery"
+      "notes": "7+ research notes created"
     },
     {
       "title": "📅 Sync golf calendar",
       "priority": "medium",
-      "notes": "Calendar invite sent by Sam. Need to extract and sync."
+      "notes": "Need .ics file or Calendar API"
     }
   ],
   "queue": [],
   "done": [
     { "title": "Build Edward Dashboard Web UI", "time": "Today" },
     { "title": "Fix Gmail email access", "time": "Today" },
-    { "title": "Research protection SaaS ideas", "time": "Tonight" },
-    { "title": "Create Obsidian vault", "time": "Tonight" },
-    { "title": "Run security audit", "time": "Tonight" },
-    { "title": "Iterate dashboard with research card", "time": "Tonight" },
-    { "title": "Build golf content strategy", "time": "Tonight" },
-    { "title": "Create content calendar tool", "time": "Tonight" },
-    { "title": "Create podcast outline generator", "time": "Tonight" },
-    { "title": "Create Twitter thread generator", "time": "Tonight" },
-    { "title": "Build command center dashboard", "time": "Tonight" },
-    { "title": "Set up Night Shift automation", "time": "Tonight" },
-    { "title": "Push golf tools to GitHub", "time": "Tonight" },
-    { "title": "Research OpenClaw community projects", "time": "Tonight" },
-    { "title": "Build shopping automation tool", "time": "Tonight" },
-    { "title": "Build inventory manager tool", "time": "Tonight" },
-    { "title": "Build cloud upload service", "time": "Tonight" },
-    { "title": "Build health dashboard tool", "time": "Tonight" },
-    { "title": "Push community tools to GitHub", "time": "Tonight" },
-    { "title": "Create comprehensive overnight report", "time": "Tonight" },
-    { "title": "Set up 8AM Discord report", "time": "Tonight" }
+    { "title": "Demonstrate Mac remote control", "time": "Today" },
+    { "title": "Create live work demo", "time": "Today" }
   ]
 }
